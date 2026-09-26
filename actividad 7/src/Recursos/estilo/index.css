@@ -1,5 +1,5 @@
-*{
-    box-sizing: content-box;
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -7,6 +7,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     color: #333;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
 }
 
 
@@ -17,17 +20,20 @@ body {
 nav {
     background-color: #222;
     padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 nav li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -48,30 +54,64 @@ nav a:hover {
 header {
     background-color: #2c3e50;
     color: white;
-    text-align: center;
     padding: 40px 20px;
+    position: sticky;
+    top: 60px;
+    z-index: 99;
+}
+
+.header-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 header h1 {
     margin: 0;
+    text-align: center;
 }
 
+header p {
+    margin: 15px 0 0 0;
+    text-align: center;
+    max-width: 700px;
+}
 
+.parrafo
+{
+    margin: 15px 0 0 0;
+    text-align: center;
+    max-width: 700px;
+}
 /* =========================
    CONTENIDO
    ========================= */
 
 main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
     width: 80%;
     max-width: 900px;
     margin: 30px auto;
+    padding: 0;
 }
 
 section {
     background-color: white;
     padding: 25px;
-    margin-bottom: 25px;
     border-radius: 8px;
+    grid-column: 1;
+}
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    grid-column: 1;
 }
 
 h2 {
@@ -105,12 +145,6 @@ a:hover {
 /* =========================
    FORMULARIO
    ========================= */
-
-form {
-    background-color: white;
-    padding: 25px;
-    border-radius: 8px;
-}
 
 label {
     font-weight: bold;
@@ -168,7 +202,46 @@ legend {
     font-weight: bold;
 }
 
-.pie_pagina{
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.pie_pagina {
     text-align: center;
+    background-color: white;
+    padding: 20px;
+    grid-column: 1 / -1;
 }
 
+
+/* =========================
+   WHATSAPP FLOTANTE
+   ========================= */
+
+.whatsapp-btn {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn img {
+    width: 35px;
+    height: 35px;
+}
