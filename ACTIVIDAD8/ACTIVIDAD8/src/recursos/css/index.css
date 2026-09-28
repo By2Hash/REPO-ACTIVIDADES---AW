@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Sora';
+    src: url(./fuentes/Sora-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Sora;
+}
+
+body {
+    min-height: 100vh;      
+    display: flex;         
+    flex-direction: column;
+}
+
+
+.encabezado_principal nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+}
+
+.encabezado_principal img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.encabezado_principal ul {
+    list-style: none;
+}
+
+.encabezado_principal a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+
+.contenido_principal {
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;                
+}
+
+.introduccion {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.introduccion h1 {
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    margin: 20px 0;
+}
+
+.introduccion h2 {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.catalogo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tarjeta-cabaña {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fafafa;
+}
+
+.tarjeta-cabaña img {
+    width: 40%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.info-cabaña {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-cabaña h3 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+}
+
+.info-cabaña .descripcion {
+    color: #555;
+    line-height: 1.5;
+}
+
+.info-cabaña .precio {
+    font-size: 1.1rem;
+    color: #2e7d32; 
+}
+
+
+form {
+    background-color: #fafafa;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+}
+
+button {
+    background-color: rgb(8, 109, 172);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    
+    
+}
+
+
+
+.pie_pagina {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: auto;      
+}
