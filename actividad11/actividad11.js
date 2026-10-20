@@ -61,4 +61,42 @@ console.log(r3);
 
 
 //3 - A
-//3 - B
+{
+    const suma = (a, b) => {
+        console.log(`El resultado de la suma es ${a + b}`);
+    };
+
+    const resta = (a, b) => {
+        console.log(`El resultado de la resta es ${a - b}`);
+    };
+
+    const operacion = (num1, num2, callback) => {
+        callback(num1, num2);
+    };
+
+    operacion(10, 5, suma);
+    operacion(10, 5, resta);
+}
+
+// 3 - B
+{
+    const suma = (a, b) => {
+        console.log(`El resultado de la suma es ${a + b}`);
+    };
+
+    const resta = (a, b) => {
+        console.log(`El resultado de la resta es ${a - b}`);
+    };
+
+    const operacion = (num1, num2, callback) => {
+        if (typeof num1 !== "number" || typeof num2 !== "number" || Number.isNaN(num1) || Number.isNaN(num2)) {
+            console.log("Debe ingresar solo números.");
+            return;
+        }
+        callback(num1, num2);
+    };
+
+    operacion(10, 5, suma);
+    operacion(10, 5, resta);
+    operacion("10", 5, suma);
+}
